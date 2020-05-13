@@ -5,10 +5,10 @@ WARNING="Run ./install.sh patch if you are using Ubuntu 18.04 or higher"
 case "$1" in
     apt)
         sudo apt install build-essential openjdk-8-jre openjdk-8-jdk \
-        fpc postgresql postgresql-client gettext python2.7 \
+        fpc postgresql postgresql-client gettext python3.8 \
         iso-codes shared-mime-info stl-manual cgroup-lite libcap-dev \
         python-dev libpq-dev libcups2-dev libyaml-dev \
-        libffi-dev python-pip virtualenv
+        libffi-dev python3-pip virtualenv
     ;;
     aptoptional)
         sudo apt-get install nginx-full php7.0-cli php7.0-fpm \
@@ -37,7 +37,7 @@ case "$1" in
             sudo apt install virtualenv
             sudo mkdir /usr/local/lib/cms/
             sudo chown `whoami`:`whoami` /usr/local/lib/cms/
-            virtualenv -p python2 /usr/local/lib/cms/
+            virtualenv -p python3 /usr/local/lib/cms/
         )
     ;;
     patch)
